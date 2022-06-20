@@ -47,6 +47,7 @@ html {
 }
 
 .nav-bar a {
+  cursor: pointer;
   text-decoration: none;
   color: white;
   margin-right: 10px;
@@ -144,6 +145,62 @@ html {
   padding: 30px;
 }
 
+.portfolio .portfolio-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 20px;
+}
+
+.portfolio .portfolio-grid-container .portfolio-grid-item a img {
+  border-radius: 10%;
+  border: 5px solid black;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.portfolio .portfolio-grid-container .portfolio-grid-item a img:hover {
+  opacity: 0.75;
+}
+
+.portfolio .desc {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.portfolio .desc ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolio .desc a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.portfolio .desc a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  bottom: -10px;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.portfolio .desc a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 /** End of Portfolio Styles **/
 /** Testimonials Styles **/
 .testimonials {
@@ -164,10 +221,48 @@ html {
   height: 100vh;
 }
 
-.Contact h1 {
+.contact h1 {
   padding: 30px;
 }
 
 /** End of Contact Styles **/
 /** Footer Styles **/
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  bottom: -10px;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.footer a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 /** End of Footer Styles **//*# sourceMappingURL=styles.css.map */
