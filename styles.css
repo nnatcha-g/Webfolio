@@ -1,5 +1,6 @@
 /** Fonts **/
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap");
 /** End of Fonts **/
 /** Scrollbar **/
 /* width */
@@ -29,7 +30,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poiret One", cursive;
+  /**font-family: 'Poiret One', cursive**/
+  /**font-family: 'Athiti', sans-serif;**/
 }
 
 html {
@@ -39,6 +41,116 @@ html {
 }
 
 /** End of Universal Styles **/
+/** Font Style **/
+#nav-home {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-about {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-portfolio {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-testimonials {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-contact {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-1 {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-2 {
+  font-family: "Poiret One", cursive;
+}
+
+#nav-3 {
+  font-family: "Poiret One", cursive;
+}
+
+#home-1 {
+  font-family: "Poiret One", cursive;
+}
+
+#home-2 {
+  font-family: "Poiret One", cursive;
+}
+
+#about-1 {
+  font-family: "Poiret One", cursive;
+}
+
+#about-2 {
+  font-family: "Poiret One", cursive;
+}
+
+#about-3 {
+  font-family: "Poiret One", cursive;
+}
+
+#about-4 {
+  font-family: "Poiret One", cursive;
+}
+
+#about-5 {
+  font-family: "Poiret One", cursive;
+}
+
+#portfolio-1 {
+  font-family: "Poiret One", cursive;
+}
+
+#portfolio-2 {
+  font-family: "Poiret One", cursive;
+}
+
+#contact-1 {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-home {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-about {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-portfolio {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-testimonials {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-contact {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-1 {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-2 {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-3 {
+  font-family: "Poiret One", cursive;
+}
+
+#footer-4 {
+  font-family: "Poiret One", cursive;
+}
+
+/** End of Font Style **/
 /** Navigation Bar Styles **/
 .nav-bar {
   display: flex;
@@ -124,7 +236,7 @@ html {
 
 .about .about-content-2 {
   margin-left: 50px;
-  margin-top: 200px;
+  margin-top: 170px;
 }
 
 .about .about-content-2 p {
@@ -147,7 +259,8 @@ html {
 
 .portfolio .portfolio-grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
+  justify-content: center;
   grid-row-gap: 20px;
 }
 
@@ -263,6 +376,30 @@ html {
 .footer a:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.footer-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-img a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-img a img {
+  width: 30px;
+  height: auto;
 }
 
 /** End of Footer Styles **//*# sourceMappingURL=styles.css.map */
