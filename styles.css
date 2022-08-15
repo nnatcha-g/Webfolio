@@ -185,8 +185,8 @@ html {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -244,19 +244,20 @@ html {
   border: 5px solid black;
   width: 100%;
   max-width: 600px;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 5vh;
   height: auto;
 }
-.about .about-content {
-  display: flex;
+.about .about-content .about-content-1 {
+  float: left;
+  width: 50%;
 }
-.about .about-content-2 {
-  margin-left: 50px;
-  margin-top: 170px;
+.about .about-content .about-content-2 {
+  float: right;
+  width: 50%;
+  margin-top: 20vh;
 }
-.about .about-content-2 p {
-  font-size: 1.5rem;
+.about .about-content .about-content-2 p {
+  font-size: 1.25vw;
   text-align: left;
   padding: 20px;
 }
@@ -300,8 +301,8 @@ html {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -395,8 +396,8 @@ input[type=submit]:hover {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -442,4 +443,39 @@ input[type=submit]:hover {
   height: auto;
 }
 
-/** End of Footer Styles **//*# sourceMappingURL=styles.css.map */
+/** End of Footer Styles **/
+/** Responsive Design **/
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 5.5vw;
+  }
+  h2 {
+    font-size: 4.5vw;
+  }
+  h3 {
+    font-size: 3.5vw;
+  }
+  p {
+    font-size: 2.5vw;
+  }
+  a {
+    font-size: 2.5vw;
+  }
+  .about .about-content img {
+    width: 50%;
+  }
+  .about .about-content .about-content-1 {
+    width: 100%;
+    clear: left;
+  }
+  .about .about-content .about-content-2 {
+    width: 100%;
+    clear: right;
+    margin-top: 5vh;
+  }
+  .about .about-content .about-content-2 p {
+    font-size: 2.5vw;
+    text-align: center;
+  }
+}
+/** End of Responsive Design **//*# sourceMappingURL=styles.css.map */
