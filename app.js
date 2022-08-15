@@ -36,7 +36,10 @@ function page_update(){
             // Portfolio Language
             document.getElementById("portfolio-1").innerHTML = "Portfolio"
             // Contact Language
-            document.getElementById("contact-1").innerHTML = "Contact"
+            document.getElementById("contact-title").innerHTML = "Contact"
+            document.getElementById("contact-name").innerHTML = "Name"
+            document.getElementById("contact-email").innerHTML = "Email"
+            document.getElementById("contact-context").innerHTML = "Context"
             // Footer Language
             document.getElementById("footer-home").innerHTML = "home"
             document.getElementById("footer-about").innerHTML = "about me"
@@ -67,7 +70,10 @@ function page_update(){
             document.getElementById("portfolio-1").style.fontFamily = "Poiret One, cursive";
             document.getElementById("portfolio-2").style.fontFamily = "Poiret One, cursive";
             // Contact Font Style
-            document.getElementById("contact-1").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("contact-title").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("contact-name").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("contact-email").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("contact-context").style.fontFamily = "Poiret One, cursive";
             // Footer Font Style
             document.getElementById("footer-home").style.fontFamily = "Poiret One, cursive";
             document.getElementById("footer-about").style.fontFamily = "Poiret One, cursive";
@@ -100,7 +106,10 @@ function page_update(){
             // Portfolio Language
             document.getElementById("portfolio-1").innerHTML = "ผลงาน"
             // Contact Language
-            document.getElementById("contact-1").innerHTML = "ติดต่อ"
+            document.getElementById("contact-title").innerHTML = "ติดต่อ"
+            document.getElementById("contact-name").innerHTML = "ชื่อ"
+            document.getElementById("contact-email").innerHTML = "Email"
+            document.getElementById("contact-context").innerHTML = "ข้อความ"
             // Footer Language
             document.getElementById("footer-home").innerHTML = "หน้าหลัก"
             document.getElementById("footer-about").innerHTML = "เกี่ยวกับตัวฉัน"
@@ -131,7 +140,10 @@ function page_update(){
             document.getElementById("portfolio-1").style.fontFamily = "Athiti, sans-serif";
             document.getElementById("portfolio-2").style.fontFamily = "Athiti, sans-serif";
             // Contact Font Style
-            document.getElementById("contact-1").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("contact-title").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("contact-name").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("contact-email").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("contact-context").style.fontFamily = "Athiti, sans-serif";
             // Footer Font Style
             document.getElementById("footer-home").style.fontFamily = "Athiti, sans-serif";
             document.getElementById("footer-about").style.fontFamily = "Athiti, sans-serif";
