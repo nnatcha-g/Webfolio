@@ -35,6 +35,18 @@ function page_update(){
             document.getElementById("about-5").innerHTML = "Skills: HTML, CSS, JS, SASS/SCSS"
             // Portfolio Language
             document.getElementById("portfolio-1").innerHTML = "Portfolio"
+            switch(port_img){
+              case 0:
+                document.getElementById("port-topic").innerHTML = "- DekCom Website -"
+                document.getElementById("port-context").innerHTML = "DekCom Website is a computer club website that I created when I was in high school."
+                document.getElementById("port-img").src = "img/port-1.png"
+                break;
+              case 1:
+                document.getElementById("port-topic").innerHTML = "-"
+                document.getElementById("port-context").innerHTML = "-"
+                document.getElementById("port-img").src = "img/port-2.png"
+                break;
+            }
             // Contact Language
             document.getElementById("contact-title").innerHTML = "Contact"
             document.getElementById("contact-name").innerHTML = "Name"
@@ -68,7 +80,10 @@ function page_update(){
             document.getElementById("about-5").style.fontFamily = "Poiret One, cursive";
             // Portfolio Font Style
             document.getElementById("portfolio-1").style.fontFamily = "Poiret One, cursive";
-            document.getElementById("portfolio-2").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("port-topic").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("port-context").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("port-prev").style.fontFamily = "Poiret One, cursive";
+            document.getElementById("port-next").style.fontFamily = "Poiret One, cursive";
             // Contact Font Style
             document.getElementById("contact-title").style.fontFamily = "Poiret One, cursive";
             document.getElementById("contact-name").style.fontFamily = "Poiret One, cursive";
@@ -105,6 +120,18 @@ function page_update(){
             document.getElementById("about-5").innerHTML = "ความสามารถ: HTML, CSS, JS, SASS/SCSS"
             // Portfolio Language
             document.getElementById("portfolio-1").innerHTML = "ผลงาน"
+            switch(port_img){
+              case 0:
+                document.getElementById("port-topic").innerHTML = "- เว็บไซต์ชมรมเด็กคอม -"
+                document.getElementById("port-context").innerHTML = "เว็บไซต์ชมรมเด็กคอม เป็นเว็บไซต์ชมรมคอมพิวเตอร์ที่ฉันสร้างขึ้นตอนมัธยมปลาย"
+                document.getElementById("port-img").src = "img/port-1.png"
+                break;
+              case 1:
+                document.getElementById("port-topic").innerHTML = "-"
+                document.getElementById("port-context").innerHTML = "-"
+                document.getElementById("port-img").src = "img/port-2.png"
+                break;
+            }
             // Contact Language
             document.getElementById("contact-title").innerHTML = "ติดต่อ"
             document.getElementById("contact-name").innerHTML = "ชื่อ"
@@ -138,7 +165,10 @@ function page_update(){
             document.getElementById("about-5").style.fontFamily = "Athiti, sans-serif";
             // Portfolio Font Style
             document.getElementById("portfolio-1").style.fontFamily = "Athiti, sans-serif";
-            document.getElementById("portfolio-2").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("port-topic").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("port-context").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("port-prev").style.fontFamily = "Athiti, sans-serif";
+            document.getElementById("port-next").style.fontFamily = "Athiti, sans-serif";
             // Contact Font Style
             document.getElementById("contact-title").style.fontFamily = "Athiti, sans-serif";
             document.getElementById("contact-name").style.fontFamily = "Athiti, sans-serif";
@@ -159,32 +189,25 @@ function page_update(){
     }
 }
 
-// Slideshow System
-let slideIndex = 1;
-showSlides(slideIndex);
+// Image Slider Function
+var port_img = 0;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function Image_slider_prev(){
+  if(port_img <= 0){
+    port_img = 1
+  }
+  else{
+    port_img = port_img - 1
+  }
+  page_update()
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function Image_slider_next(){
+  if(port_img >= 1){
+    port_img = 0
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  else{
+    port_img = port_img + 1
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  page_update()
 }
