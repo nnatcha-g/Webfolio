@@ -189,25 +189,25 @@ function page_update(){
     }
 }
 
-// Image Slider Function
-var port_img = 0;
+// // Image Slider Function
+// var port_img = 0;
 
-function Image_slider_prev(){
-  if(port_img <= 0){
-    port_img = 1
-  }
-  else{
-    port_img = port_img - 1
-  }
-  page_update()
-}
+// function Image_slider_prev(){
+//   if(port_img <= 0){
+//     port_img = 1
+//   }
+//   else{
+//     port_img = port_img - 1
+//   }
+//   page_update()
+// }
 
-function Image_slider_next(){
-  if(port_img >= 1){
-    port_img = 0
-  }
-  else{
-    port_img = port_img + 1
-  }
-  page_update()
-}
+// function Image_slider_next(){
+//   if(port_img >= 1){
+//     port_img = 0
+//   }
+//   else{
+//     port_img = port_img + 1
+//   }
+//   page_update()
+// }

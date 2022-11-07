@@ -328,12 +328,9 @@ html {
   padding: 30px;
 }
 .contact .contact-content .contact-1 {
-  float: left;
-  width: 50%;
-}
-.contact .contact-content .contact-2 {
-  float: right;
-  width: 50%;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
 }
 
 h3 {
