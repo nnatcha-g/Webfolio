@@ -1,136 +1,116 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="Natchapol Mingmahaphan, nnatcha.g">
-        <title>Natchapol M. - Webfolio</title>
-        <meta name="author" content="Natchapol Mingmahaphan">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="img/icon.png">
-    </head>
-    <body>
-        <!-- Navigation Bar -->
-        <div class="nav-bar" id="1">
-            <ul>
-                <a href="#1" id="nav-home">Home</a>
-                <a href="#2" id="nav-about">About Me</a>
-                <a href="#3" id="nav-portfolio">Portfolio</a>
-                <!-- <a href="#4" id="nav-testimonials">Testimonials</a> -->
-                <!-- <a href="#5" id="nav-contact">contact</a> -->
-                <a></a>
-                <a onclick="TH_lang()" id="nav-1">TH</a>
-                <a id="nav-2">|</a>
-                <a onclick="EN_lang()" id="nav-3">EN</a>
-            </ul>
-        </div>
-        <!-- End of Navigation Bar -->
+<html lang="en-us">
 
-        <!-- Home -->
-        <div class="home">
-            <h1 id="home-1">Natchapol Mingmahaphan</h1>
-            <p id="home-2">College Student</p>
-        </div>
-        <!-- End of Home -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Natchapol Mingmahaphan">
+	<meta name="keywords" content="Natchapol Mingmahaphan, nnatcha.g">
+	<title>Natchapol M. - Webfolio 🎮✨</title>
+	<link rel="icon" href="icon.png">
+	<style>
+		html,
+		body {
+			background: #000;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+			padding: 0;
+			margin: 0;
+		}
 
-        <!-- About -->
-        <div class="about" id="2">
-            <h1 id="about-1">About me</h1>
-            <div class="about-content">
-                <div class="about-content-1">
-                    <img src="img/me.jpg">
-                </div>
-                <div class="about-content-2">
-                    <p id="about-2">Name: Natchapol Mingmahaphan</p>
-                    <p id="about-3">Education: <br>Bachelor of Science in ICT | Faculty of ICT, Mahidol University | 2022 - Present</p>
-                    <!-- <p id="about-4">Work Experience: <br>Freelance Web Developer | 2022 - Present</p> -->
-                    <p id="about-5">Skills: HTML, CSS, JS, SASS/SCSS, C, C#, Java</p>
-                </div>
-            </div>
-        </div>
-        <!-- End of About -->
+		div#gameContainer {
+			background: transparent !important;
+			position: absolute;
+		}
 
-        <!-- Portfolio -->
-        <div class="portfolio" id="3">
-            <h1 id="portfolio-1">Portfolio</h1>
-            <div class="port-slider">
-                <a onclick="Image_slider_prev()" id="port-prev">-</a>
-                <img id="port-img" src="img/port-1.png">
-                <a onclick="Image_slider_next()" id="port-next">+</a>
-            </div>
-            <h1 id="port-topic">- DekCom Website -</h1>
-            <p id="port-context">DekCom Website is a computer club website that I created when I was in high school.</p>
-        </div>
-        <!-- End of Portfolio -->
+		div#gameContainer canvas {
+			position: absolute;
+		}
 
-        <!-- Testimonials -->
-        <!--<div class="testimonials" id="4">
-            <h1>Testimonials</h1>
-        </div>-->
-        <!-- End of Testimonials -->
+		div#gameContainer canvas[data-pixel-art="true"] {
+			position: absolute;
+			image-rendering: optimizeSpeed;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: optimize-contrast;
+			image-rendering: pixelated;
+			-ms-interpolation-mode: nearest-neighbor;
+		}
+	</style>
+</head>
 
-        <!--
-        Contact
-        <div class="contact" id="5"> 
-            <h1 id="contact-title">Contact Me</h1>
-            <div class="contact-content">
-                <div class="contact-1">
-                    <h2 id="personal-informations">Personal Informations</h2>
-                    <form>
-                        <h3 id="contact-name">Name</h3>
-                        <input type="text" id="name" name="name" placeholder="Your Name.."><br>
-        
-                        <h3 id="contact-email">Email</h3>
-                        <input type="text" id="email" name="email" placeholder="Your Email.."><br>
-        
-                        <h3 id="contact-context">Context</h3>
-                        <input type="text" id="context" name="context" placeholder="Context.."><br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-                <div class="contact-2">
-                    <h2 id="commission-details">Commission Details</h2>
-                    <form>
-                        <h3 id="details-1">Amount of Page</h3>
-                        <input type="">
-                    </form>
-                </div> -->
-                <!-- <div class="contact-3">
-                    <form>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-        -->
-        <!-- End of Contact -->
+<body>
+	<div id="gameContainer">
+		<canvas id="unity-canvas" data-pixel-art="true"></canvas>
+		<script src="Build/76f034cff49013ce85bd6945ebf32347.loader.js"></script>
+		<script>
+			var canvas = document.querySelector("#unity-canvas");
+			var config = {
+				dataUrl: "Build/bf45d4ba8898092e0f04183438c3e12e.data",
+				frameworkUrl: "Build/0521a2e488e61062bd30ea38d82e6c2c.framework.js",
+				codeUrl: "Build/80a51f933c2d2393559051babd2faacf.wasm",
+				streamingAssetsUrl: "StreamingAssets",
+				companyName: "DefaultCompany",
+				productName: "Webfolio",
+				productVersion: "1.0",
+			};
+			var scaleToFit;
+			try {
+				scaleToFit = !!JSON.parse("");
+			} catch (e) {
+				scaleToFit = true;
+			}
+			function progressHandler(progress) {
+				var percent = progress * 100 + '%';
+				canvas.style.background = 'linear-gradient(to right, white, white ' + percent + ', transparent ' + percent + ', transparent) no-repeat center';
+				canvas.style.backgroundSize = '100% 1rem';
+			}
+			function onResize() {
+				var container = canvas.parentElement;
+				var w;
+				var h;
 
-        <!-- Footer -->
-        <div class="footer">
-            <ul>
-                <a href="#1" id="footer-home">Home</a>
-                <a href="#2" id="footer-about">About Me</a>
-                <a href="#3" id="footer-portfolio">Portfolio</a>
-                <!-- <a href="#4" id="footer-testimonials">Testimonials</a> -->
-                <!-- <a href="#5" id="footer-contact">contact</a> -->
-                <a></a>
-                <a onclick="TH_lang()" id="footer-2">TH</a>
-                <a id="footer-3">|</a>
-                <a onclick="EN_lang()" id="footer-4">EN</a>
-            </ul>
-        </div>
-        <div class="footer-img">
-            <a href="https://www.facebook.com/natchapol.mingmahaphan"><img src="img/facebook-icon.png"></a>
-            <a href="https://instagram.com/nnatcha.g?igshid=YmMyMTA2M2Y="><img src="img/instagram-icon.png"></a>
-            <a href="https://www.linkedin.com/in/natchapol-mingmahaphan-82b990212/"><img src="img/linkedin-icon.png"></a>
-            <a href="mailto:golffywarewolf@gmail.com"><img src="img/email-icon.png"></a>
-            <a href="https://github.com/nnatcha-g"><img src="img/github-icon.png"></a>
-        </div>
-        <div class="footer">
-            <p id="footer-1">© Natchapol Mingmahaphan 2022 - 2023 All rights reserved.</p>
-        </div>
-        <!-- End of Footer -->
-    </body>
-    <script src="app.js"></script>
+				if (scaleToFit) {
+					w = window.innerWidth;
+					h = window.innerHeight;
+
+					var r = 1080 / 1920;
+
+					if (w * r > window.innerHeight) {
+						w = Math.min(w, Math.ceil(h / r));
+					}
+					h = Math.floor(w * r);
+				} else {
+					w = 1920;
+					h = 1080;
+				}
+
+				container.style.width = canvas.style.width = w + "px";
+				container.style.height = canvas.style.height = h + "px";
+				container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+			}
+			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
+				canvas = instance.Module.canvas;
+				onResize();
+			});
+			window.addEventListener('resize', onResize);
+			onResize();
+
+			if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+				// Mobile device style: fill the whole browser client area with the game canvas:
+				const meta = document.createElement('meta');
+				meta.name = 'viewport';
+				meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+				document.getElementsByTagName('head')[0].appendChild(meta);
+			}
+		</script>
+	</div>
+</body>
+
 </html>
